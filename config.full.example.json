@@ -35,6 +35,7 @@
     "provider": "qualified_diverse_reward_models",
     "model": "not-applicable",
     "temperature": 0.0,
-    "max_output_tokens": 4096
+    "max_output_tokens": 4096,
+    "additional_exact_repeats": 2
   }
 }

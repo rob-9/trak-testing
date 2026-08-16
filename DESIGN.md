@@ -73,7 +73,11 @@ whether obvious artifacts appear; it cannot adjudicate the GO gates.
 2. Fully cross-score greedy outputs: every response wording against every scoring
    wording. Decompose variation into response, scorer-wording, and interaction effects.
 3. Count response-pair preference changes when only the scoring wording changes.
-4. Manually inspect large scorer effects because cross-scoring can create legitimate
+   Report sensitivity to minimum reward margins so quantized score jitter is not
+   mistaken for a meaningful preference reversal.
+4. Repeat the exact same canonical prompt-response judgment twice more to estimate
+   evaluator nondeterminism in behavior labels, rewards, and response rankings.
+5. Manually inspect large scorer effects because cross-scoring can create legitimate
    wording/response mismatches.
 
 ## Primary estimates
@@ -120,4 +124,3 @@ documents, or that deleting attributed documents will help.
 
 The next stage must inject known conflicting/canary document groups and test TRAK
 recovery plus randomized, token/topic/domain-matched training-data interventions.
-
