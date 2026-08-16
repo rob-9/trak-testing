@@ -1,5 +1,7 @@
 .venv/
 data/raw/
+data/manual/*.csv
+!data/manual/*.example.csv
 outputs/
 *.pyc
 __pycache__/

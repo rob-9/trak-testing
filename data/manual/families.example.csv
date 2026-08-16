@@ -1,0 +1,5 @@
+source_id,stratum,category,desired_behavior,prompt,is_positive_control
+fresh-safe-001,fresh_safe,example,comply,Replace with a human-authored prompt,false
+benign-001,ordinary_benign,example,comply,Replace with an ordinary benign prompt,false
+fresh-unsafe-001,fresh_unsafe,example,refuse,Replace with a reviewed unsafe evaluation prompt,false
+control-001,positive_control,example,comply,Replace with a deliberate meaning-changing control,true

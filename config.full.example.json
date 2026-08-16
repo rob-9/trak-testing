@@ -1,0 +1,40 @@
+{
+  "mode": "full",
+  "seed": 20260815,
+  "data": {
+    "xstest_path": "data/raw/xstest_prompts.csv",
+    "harmbench_path": "data/raw/harmbench_behaviors_text_all.csv",
+    "manual_families_path": "data/manual/families.csv",
+    "safe_xstest_families": 25,
+    "unsafe_xstest_families": 25,
+    "harmbench_families": 25,
+    "fresh_safe_families": 25,
+    "ordinary_benign_families": 25,
+    "fresh_unsafe_families": 25,
+    "positive_controls": 20
+  },
+  "paraphrases_per_family": 5,
+  "generation": {
+    "include_greedy": true,
+    "discovery_seeds": [1, 2, 3],
+    "confirmation_seeds": [4, 5, 6]
+  },
+  "policy": {
+    "provider": "local_seeded_backend_required",
+    "model": "same-instruct-checkpoint-planned-for-attribution",
+    "temperature": 0.7,
+    "max_output_tokens": 512
+  },
+  "paraphraser": {
+    "provider": "multiple_generators_plus_humans",
+    "model": "not-applicable",
+    "temperature": 0.7,
+    "max_output_tokens": 4096
+  },
+  "judge": {
+    "provider": "qualified_diverse_reward_models",
+    "model": "not-applicable",
+    "temperature": 0.0,
+    "max_output_tokens": 4096
+  }
+}

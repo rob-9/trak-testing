@@ -1,4 +1,5 @@
 {
+  "mode": "smoke",
   "seed": 20260815,
   "data": {
     "xstest_path": "data/raw/xstest_prompts.csv",
@@ -8,7 +9,11 @@
     "harmbench_families": 4
   },
   "paraphrases_per_family": 3,
-  "responses_per_wording": 2,
+  "generation": {
+    "include_greedy": true,
+    "discovery_seeds": [1],
+    "confirmation_seeds": [2]
+  },
   "policy": {
     "provider": "gemini",
     "model": "gemini-2.5-flash-lite",
